@@ -9,7 +9,7 @@ documents:
   - rh
   - finance
   - admin
-  version: '1.0'
+  version: '2.0'
   date: '2026-02-15'
   faits_cles:
   - 'Nombre de jours : 25 jours ouvrables par an'
@@ -17,12 +17,29 @@ documents:
   - 'Délai de notification : 30 jours avant la prise de congé'
   - 'Proratisation : 0,8 jour par mois de service'
   - 'Remplacement : 50% de la rémunération'
+  statut: actuelle
+  famille: RH-001
+- id: RH-001-V1
+  titre: Politique des congés payés
+  departement: RH
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2025-01-15'
+  statut: obsolete
+  famille: RH-001
+  faits_cles:
+  - 'Nombre de jours : 20 jours ouvrables par an'
+  - 'Version : 2025'
+  - 'Délai de notification : 45 jours avant la prise de congé'
+  - 'Proratisation : 0,6 jour par mois de service'
+  - 'Remplacement : 60% de la rémunération'
 - id: RH-002
   titre: Politique du télétravail
   departement: RH
   confidentialite: public
   roles_autorises: *id001
-  version: '1.0'
+  version: '2.0'
   date: '2026-03-15'
   faits_cles:
   - 'Nombre de jours par semaine : 2 jours'
@@ -30,6 +47,23 @@ documents:
   - 'Équipement fourni : ordinateur portable, logiciels nécessaires'
   - 'Suivi : 10% des employés soumis à un suivi hebdomadaire'
   - 'Performance : 90% des employés ont un taux de productivité équivalent'
+  statut: actuelle
+  famille: RH-002
+- id: RH-002-V1
+  titre: Politique du télétravail
+  departement: RH
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2025-01-15'
+  statut: obsolete
+  famille: RH-002
+  faits_cles:
+  - '- Nombre de jours par semaine : 3 jours'
+  - '- Délai d''approbation : 20 jours après la demande'
+  - '- Équipement fourni : ordinateur de bureau, accès réseau'
+  - '- Suivi : 5% des employés soumis à un suivi hebdomadaire'
+  - '- Performance : 85% des employés ont un taux de productivité équivalent'
 - id: RH-003
   titre: Politique des horaires de travail
   departement: RH
@@ -115,7 +149,7 @@ documents:
   roles_autorises: &id002
   - rh
   - admin
-  version: '1.0'
+  version: '2.0'
   date: '2026-03-15'
   faits_cles:
   - 'Salaire minimum : 2 000 TND par mois'
@@ -123,6 +157,23 @@ documents:
   - 'Ajustements salariaux : 2 fois par an (janvier et juillet)'
   - 'Prime annuelle : 10% du salaire annuel'
   - 'Différences de niveau : 5 niveaux de salaires'
+  statut: actuelle
+  famille: RHC-001
+- id: RHC-001-V1
+  titre: Grille des salaires
+  departement: RH
+  confidentialite: confidentiel
+  roles_autorises: *id002
+  version: '1.0'
+  date: '2025-01-15'
+  statut: obsolete
+  famille: RHC-001
+  faits_cles:
+  - 'Salaire minimum: 1 800 TND par mois'
+  - 'Salaire maximum: 9 000 TND par mois'
+  - 'Ajustements salariaux: 3 fois par an (février et août)'
+  - 'Prime annuelle: 8% du salaire annuel'
+  - 'Différences de niveau: 4 niveaux de salaires'
 - id: RHC-002
   titre: Politique des primes
   departement: RH
@@ -183,7 +234,7 @@ documents:
   departement: IT
   confidentialite: public
   roles_autorises: *id001
-  version: '1.0'
+  version: '2.0'
   date: '2026-04-15'
   faits_cles:
   - Connectivité sécurisée pour 95% des employés travaillant à distance
@@ -192,12 +243,30 @@ documents:
   - 'Taux d''availability du réseau VPN : 99,9%'
   - Tous les employés doivent effectuer un test de connexion chaque mois
   - Support technique disponible 24/7 pour les problèmes de connexion
+  statut: actuelle
+  famille: IT-001
+- id: IT-001-V1
+  titre: Politique du réseau virtuel privé (VPN)
+  departement: IT
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2025-01-15'
+  statut: obsolete
+  famille: IT-001
+  faits_cles:
+  - '- Connectivité sécurisée pour 90% des employés travaillant à distance'
+  - '- Tous les employés doivent installer le logiciel de connexion VPN dans les 10
+    jours de leur embauche'
+  - '- Taux d''availability du réseau VPN : 99,8%'
+  - '- Tous les employés doivent effectuer un test de connexion chaque trimestre'
+  - '- Support technique disponible 24/5 pour les problèmes de connexion'
 - id: IT-002
   titre: Politique des mots de passe
   departement: IT
   confidentialite: public
   roles_autorises: *id001
-  version: '1.0'
+  version: '2.0'
   date: '2026-05-15'
   faits_cles:
   - Changement de mot de passe tous les 90 jours
@@ -205,6 +274,23 @@ documents:
   - Utilisation obligatoire de minuscules, majuscules, chiffres et caractères spéciaux
   - Utilisation interdite de mots de passe précédemment utilisés
   - 'Mots de passe renforcés pour les comptes administratifs : 18 caractères'
+  statut: actuelle
+  famille: IT-002
+- id: IT-002-V1
+  titre: Politique des mots de passe
+  departement: IT
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2025-01-15'
+  statut: obsolete
+  famille: IT-002
+  faits_cles:
+  - Changement de mot de passe tous les 85 jours
+  - Mot de passe minimum de 10 caractères
+  - Utilisation obligatoire de minuscules, majuscules et chiffres
+  - Utilisation interdite de mots de passe précédemment utilisés
+  - 'Mots de passe renforcés pour les comptes administratifs : 16 caractères'
 - id: IT-003
   titre: Procédures d'incidents informatiques
   departement: IT
@@ -265,7 +351,7 @@ documents:
   - manager
   - finance
   - admin
-  version: '1.0'
+  version: '2.0'
   date: '2026-05-15'
   faits_cles:
   - 'Budget total estimé : 200 000 000 TND'
@@ -275,12 +361,31 @@ documents:
   - 'Budget Finance : 10 000 000 TND (5%)'
   - 'Budget Juridique : 5 000 000 TND (2.5%)'
   - 'Budget Direction : 5 000 000 TND (2.5%)'
+  statut: actuelle
+  famille: FIN-001
+- id: FIN-001-V1
+  titre: Budget annuel 2026
+  departement: Finance
+  confidentialite: restreint
+  roles_autorises: *id003
+  version: '1.0'
+  date: '2025-01-15'
+  statut: obsolete
+  famille: FIN-001
+  faits_cles:
+  - '- Budget total estimé : 195 000 000 TND'
+  - '- Budget IT : 18 000 000 TND (9.2%)'
+  - '- Budget Ressources humaines : 13 000 000 TND (6.7%)'
+  - '- Budget Production/Projets : 135 000 000 TND (69%)'
+  - '- Budget Finance : 9 000 000 TND (4.6%)'
+  - '- Budget Juridique : 4 500 000 TND (2.3%)'
+  - '- Budget Direction : 4 500 000 TND (2.3%)'
 - id: FIN-002
   titre: Frais de mission
   departement: Finance
   confidentialite: restreint
   roles_autorises: *id003
-  version: '1.0'
+  version: '2.0'
   date: '2026-06-15'
   faits_cles:
   - 'Seuil de dépenses autorisées par jour : 5 000 TND'
@@ -288,6 +393,23 @@ documents:
   - 'Nombre maximal de jours de mission par an : 30'
   - 'Budget annuel pour frais de mission : 3 000 000 TND'
   - 'Délai de présentation des justificatifs : 15 jours après la fin de la mission'
+  statut: actuelle
+  famille: FIN-002
+- id: FIN-002-V1
+  titre: Frais de mission
+  departement: Finance
+  confidentialite: restreint
+  roles_autorises: *id003
+  version: '1.0'
+  date: '2025-01-15'
+  statut: obsolete
+  famille: FIN-002
+  faits_cles:
+  - 'Seuil de dépenses autorisées par jour : 4 500 TND'
+  - Remboursement sous 35 jours
+  - 'Nombre maximal de jours de mission par an : 25'
+  - 'Budget annuel pour frais de mission : 2 800 000 TND'
+  - 'Délai de présentation des justificatifs : 10 jours après la fin de la mission'
 - id: FIN-003
   titre: Rapports trimestriels
   departement: Finance
@@ -319,7 +441,7 @@ documents:
   departement: Juridique
   confidentialite: public
   roles_autorises: *id001
-  version: '1.0'
+  version: '2.0'
   date: '2026-06-15'
   faits_cles:
   - Appliquée à tous les employés et partenaires commerciaux
@@ -329,6 +451,25 @@ documents:
   - Formation annuelle obligatoire pour 95% des employés
   - Mise en place d'un système de suivi des accès aux données sensibles (5000 incidents
     détectés en 2025)
+  statut: actuelle
+  famille: JUR-001
+- id: JUR-001-V1
+  titre: Charte de confidentialité
+  departement: Juridique
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2025-01-15'
+  statut: obsolete
+  famille: JUR-001
+  faits_cles:
+  - '- Appliquée à tous les employés et partenaires commerciaux'
+  - '- Définition des zones sensibles de l''entreprise (35% des données sensibles
+    stockées sur le réseau)'
+  - '- Contrat de non-divulgation signé par 75% des employés'
+  - '- Formation annuelle obligatoire pour 90% des employés'
+  - '- Mise en place d''un système de suivi des accès aux données sensibles (4000
+    incidents détectés en 2024)'
 - id: JUR-002
   titre: RGPD
   departement: Juridique

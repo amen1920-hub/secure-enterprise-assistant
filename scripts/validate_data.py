@@ -72,7 +72,9 @@ def main():
             "confidentialite": d["confidentialite"],
             "roles_autorises": "|".join(d["roles_autorises"]),
             "version": d["version"],
-            "date": d["date"],
+                        "date": d["date"],
+            "statut": d.get("statut", "actuelle"),
+            "famille": d.get("famille", did),
             "chemin": f"data/raw/{did}.md",
         })
 
