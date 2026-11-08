@@ -1,0 +1,503 @@
+documents:
+- id: RH-001
+  titre: Politique des congés payés
+  departement: RH
+  confidentialite: public
+  roles_autorises: &id001
+  - employe
+  - manager
+  - rh
+  - finance
+  - admin
+  version: '1.0'
+  date: '2026-02-15'
+  faits_cles:
+  - 'Nombre de jours : 25 jours ouvrables par an'
+  - 'Version : 2026'
+  - 'Délai de notification : 30 jours avant la prise de congé'
+  - 'Proratisation : 0,8 jour par mois de service'
+  - 'Remplacement : 50% de la rémunération'
+- id: RH-002
+  titre: Politique du télétravail
+  departement: RH
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2026-03-15'
+  faits_cles:
+  - 'Nombre de jours par semaine : 2 jours'
+  - 'Délai d''approbation : 15 jours après la demande'
+  - 'Équipement fourni : ordinateur portable, logiciels nécessaires'
+  - 'Suivi : 10% des employés soumis à un suivi hebdomadaire'
+  - 'Performance : 90% des employés ont un taux de productivité équivalent'
+- id: RH-003
+  titre: Politique des horaires de travail
+  departement: RH
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2026-04-15'
+  faits_cles:
+  - 'Heures de travail : 8h30 à 17h30'
+  - 'Pause déjeuner : 1 heure'
+  - 'Délai de notification de modification : 15 jours'
+  - 'Flexibilité : 5% des employés peuvent ajuster leurs horaires'
+  - 'Surveillant : 1 pour 50 employés'
+- id: RH-004
+  titre: Procédure de recrutement
+  departement: RH
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2026-05-15'
+  faits_cles:
+  - 'Temps de processus : 30 jours'
+  - 'Nombre de candidats par poste : 10'
+  - 'Évaluation : 2 entretiens avec le manager et le responsable RH'
+  - 'Formation initiale : 5 jours'
+  - 'Probation : 3 mois'
+- id: RH-005
+  titre: Politique de formation
+  departement: RH
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2026-06-15'
+  faits_cles:
+  - 'Budget annuel : 10% du salaire annuel total'
+  - 'Nombre d''heures de formation par an : 40 heures'
+  - 'Formateurs : 10% des employés en interne'
+  - 'Délai d''inscription : 15 jours avant le début de la formation'
+  - 'Suivi : 80% des employés suivent une formation au cours de l''année'
+- id: RH-006
+  titre: Politique des absences
+  departement: RH
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2026-07-15'
+  faits_cles:
+  - 'Nombre de jours par an : 10 jours'
+  - 'Délai de notification : 15 jours'
+  - 'Justificatifs : à fournir sous 7 jours'
+  - 'Remplacement : 50% de la rémunération'
+  - 'Absences maladies : 70% des employés bénéficient de l''assurance maladie'
+- id: RH-007
+  titre: Politique des remboursements
+  departement: RH
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2026-08-15'
+  faits_cles:
+  - 'Délai de remboursement : 30 jours'
+  - 'Montant maximum : 1000 TND'
+  - 'Justificatifs : à fournir sous 30 jours'
+  - 'Remboursement des frais de transport : 70% des employés'
+  - 'Remboursement des frais de formation : 90% des employés'
+- id: RH-008
+  titre: Politique de sécurité informatique
+  departement: RH
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2026-09-15'
+  faits_cles:
+  - 'Mot de passe : 12 caractères minimum'
+  - 'Changement de mot de passe : tous les 90 jours'
+  - 'Nombre de tentatives : 3'
+  - 'Délai de notification de changement : 15 jours'
+  - 'Formation : 50% des employés ont suivi une formation sur la sécurité'
+- id: RHC-001
+  titre: Grille des salaires
+  departement: RH
+  confidentialite: confidentiel
+  roles_autorises: &id002
+  - rh
+  - admin
+  version: '1.0'
+  date: '2026-03-15'
+  faits_cles:
+  - 'Salaire minimum : 2 000 TND par mois'
+  - 'Salaire maximum : 10 000 TND par mois'
+  - 'Ajustements salariaux : 2 fois par an (janvier et juillet)'
+  - 'Prime annuelle : 10% du salaire annuel'
+  - 'Différences de niveau : 5 niveaux de salaires'
+- id: RHC-002
+  titre: Politique des primes
+  departement: RH
+  confidentialite: confidentiel
+  roles_autorises: *id002
+  version: '1.0'
+  date: '2026-04-15'
+  faits_cles:
+  - 'Prime de performance : 5% du salaire mensuel'
+  - 'Prime de présence : 2% du salaire mensuel'
+  - 'Prime de fin d''année : 15% du salaire annuel'
+  - 'Prime de longévité : 2% du salaire annuel après 5 ans d''ancienneté'
+  - 'Prime de récompense : 10% du salaire mensuel pour les réalisations exceptionnelles'
+- id: RHC-003
+  titre: Procédures d'évaluation des performances
+  departement: RH
+  confidentialite: confidentiel
+  roles_autorises: *id002
+  version: '1.0'
+  date: '2026-05-15'
+  faits_cles:
+  - 'Évaluations annuelles : 1 fois par an'
+  - 'Critères d''évaluation : 4 critères (compétences, résultats, comportement, potentiel)'
+  - 'Poids des critères : 30% pour les compétences, 40% pour les résultats, 20% pour
+    le comportement, 10% pour le potentiel'
+  - 'Résultats d''évaluation : 4 niveaux (excellente, bonne, moyenne, faible)'
+  - 'Action plan : élaboration et suivi d''un plan d''amélioration pour les évaluations
+    faibles'
+- id: RHC-004
+  titre: Procédures disciplinaires
+  departement: RH
+  confidentialite: confidentiel
+  roles_autorises: *id002
+  version: '1.0'
+  date: '2026-06-15'
+  faits_cles:
+  - 'Conducteur : Sonia Ben Ammar (RH)'
+  - 'Première avertissement : 15 jours de congés payés'
+  - 'Deuxième avertissement : 30 jours de congés payés'
+  - 'Suspension : 45 jours de congés payés'
+  - 'Licenciement : après 3 avertissements ou faute grave'
+  - 'Délais : 15 jours pour la notification des avertissements'
+- id: RHC-005
+  titre: Politique des congés non payés
+  departement: RH
+  confidentialite: confidentiel
+  roles_autorises: *id002
+  version: '1.0'
+  date: '2026-07-15'
+  faits_cles:
+  - 'Congés non payés : 5 jours par an'
+  - 'Accumulation : jusqu''à 10 jours non payés'
+  - 'Conversion en indemnité : 1 jour non payé = 0,5 TND'
+  - 'Transfert : 2 jours non payés peuvent être transférés à l''employé de l''entreprise'
+  - 'Limite : 10 jours non payés peuvent être convertis en indemnité ou transférés'
+- id: IT-001
+  titre: Politique du réseau virtuel privé (VPN)
+  departement: IT
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2026-04-15'
+  faits_cles:
+  - Connectivité sécurisée pour 95% des employés travaillant à distance
+  - Tous les employés doivent installer le logiciel de connexion VPN dans les 7 jours
+    de leur embauche
+  - 'Taux d''availability du réseau VPN : 99,9%'
+  - Tous les employés doivent effectuer un test de connexion chaque mois
+  - Support technique disponible 24/7 pour les problèmes de connexion
+- id: IT-002
+  titre: Politique des mots de passe
+  departement: IT
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2026-05-15'
+  faits_cles:
+  - Changement de mot de passe tous les 90 jours
+  - Mot de passe minimum de 12 caractères
+  - Utilisation obligatoire de minuscules, majuscules, chiffres et caractères spéciaux
+  - Utilisation interdite de mots de passe précédemment utilisés
+  - 'Mots de passe renforcés pour les comptes administratifs : 18 caractères'
+- id: IT-003
+  titre: Procédures d'incidents informatiques
+  departement: IT
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2026-06-15'
+  faits_cles:
+  - Réponse immédiate aux incidents de niveau critique (100% des cas)
+  - 'Temps moyen de résolution des incidents : 48 heures'
+  - 'Incidents de niveau 1 (critiques) : 30 minutes d''intervention'
+  - 'Incidents de niveau 2 (majeurs) : 2 heures d''intervention'
+  - 'Incidents de niveau 3 (mineurs) : 4 heures d''intervention'
+- id: IT-004
+  titre: Politique du matériel informatique
+  departement: IT
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2026-07-15'
+  faits_cles:
+  - Tous les ordinateurs de bureau sont fournis par l'entreprise
+  - Maintenance préventive tous les 6 mois
+  - Remplacement des ordinateurs tous les 3 ans
+  - Tous les employés doivent signaler les problèmes de matériel dans les 24 heures
+  - Support technique disponible 24/7 pour les problèmes de matériel
+- id: IT-005
+  titre: Politique de messagerie électronique
+  departement: IT
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2026-08-15'
+  faits_cles:
+  - Tous les employés doivent utiliser l'adresse email de l'entreprise
+  - 'Taille maximale des messages : 25Mo'
+  - Suppression automatique des emails archivés après 3 ans
+  - 'Stockage de la messagerie : 10Go par utilisateur'
+  - Utilisation interdite de la messagerie pour des utilisations non professionnelles
+- id: IT-006
+  titre: Procédures de sauvegarde des données
+  departement: IT
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2026-09-15'
+  faits_cles:
+  - Sauvegarde quotidienne des données critiques
+  - Sauvegarde hebdomadaire complète des données
+  - Stockage des sauvegardes sur serveurs secondaires
+  - Tous les employés doivent effectuer un test de restauration tous les 3 mois
+  - Sauvegarde des données du PDG tous les jours
+- id: FIN-001
+  titre: Budget annuel 2026
+  departement: Finance
+  confidentialite: restreint
+  roles_autorises: &id003
+  - manager
+  - finance
+  - admin
+  version: '1.0'
+  date: '2026-05-15'
+  faits_cles:
+  - 'Budget total estimé : 200 000 000 TND'
+  - 'Budget IT : 20 000 000 TND (10%)'
+  - 'Budget Ressources humaines : 15 000 000 TND (7.5%)'
+  - 'Budget Production/Projets : 140 000 000 TND (70%)'
+  - 'Budget Finance : 10 000 000 TND (5%)'
+  - 'Budget Juridique : 5 000 000 TND (2.5%)'
+  - 'Budget Direction : 5 000 000 TND (2.5%)'
+- id: FIN-002
+  titre: Frais de mission
+  departement: Finance
+  confidentialite: restreint
+  roles_autorises: *id003
+  version: '1.0'
+  date: '2026-06-15'
+  faits_cles:
+  - 'Seuil de dépenses autorisées par jour : 5 000 TND'
+  - Remboursement sous 30 jours
+  - 'Nombre maximal de jours de mission par an : 30'
+  - 'Budget annuel pour frais de mission : 3 000 000 TND'
+  - 'Délai de présentation des justificatifs : 15 jours après la fin de la mission'
+- id: FIN-003
+  titre: Rapports trimestriels
+  departement: Finance
+  confidentialite: restreint
+  roles_autorises: *id003
+  version: '1.0'
+  date: '2026-07-15'
+  faits_cles:
+  - 'Période couverte : 1er janvier - 31 décembre 2026'
+  - 'Rédigés par : les départements concernés'
+  - 'Validation par : la direction financière'
+  - 'Date de soumission : fin du mois suivant la fin du trimestre'
+  - 'Nombre de rapports : 4 (trimestriels)'
+- id: FIN-004
+  titre: Achats
+  departement: Finance
+  confidentialite: restreint
+  roles_autorises: *id003
+  version: '1.0'
+  date: '2026-08-15'
+  faits_cles:
+  - 'Budget annuel : 150 000 000 TND'
+  - 'Seuil d''achat pour approbation directe : 5 000 TND'
+  - 'Procédure d''achat pour dépenses supérieures à 5 000 TND : appel d''offres'
+  - 'Délai maximal pour la réception des marchandises : 10 jours'
+  - Remboursement sous 30 jours après la réception des marchandises
+- id: JUR-001
+  titre: Charte de confidentialité
+  departement: Juridique
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2026-06-15'
+  faits_cles:
+  - Appliquée à tous les employés et partenaires commerciaux
+  - Définition des zones sensibles de l'entreprise (40% des données sensibles stockées
+    sur le réseau)
+  - Contrat de non-divulgation signé par 80% des employés
+  - Formation annuelle obligatoire pour 95% des employés
+  - Mise en place d'un système de suivi des accès aux données sensibles (5000 incidents
+    détectés en 2025)
+- id: JUR-002
+  titre: RGPD
+  departement: Juridique
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2026-07-15'
+  faits_cles:
+  - Application obligatoire pour tous les services traitant des données personnelles
+  - Formation annuelle obligatoire pour 75% des employés
+  - Contrat de sous-traitance signé avec 3 fournisseurs de services externes
+  - Déclaration de traitement de données enregistrée auprès de la CNIL (Commission
+    nationale de l'informatique et des libertés) en 2015
+  - 'Budget alloué à la conformité RGPD : 150 000 TND (2026)'
+- id: JUR-003
+  titre: Code de conduite
+  departement: Juridique
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2026-08-15'
+  faits_cles:
+  - Valable pour tous les employés et partenaires
+  - Définition des principes éthiques (6 principes clés)
+  - Formation initiale à la signature de 100% des nouveaux employés
+  - Suivi des comportements via un système de dénonciation anonyme (200 plaintes en
+    2025)
+  - Révision triennale du code de conduite (dernière révision en 2023)
+- id: JUR-004
+  titre: Politique de gestion des données personnelles
+  departement: Juridique
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2026-09-15'
+  faits_cles:
+  - Application à tous les services traitant des données personnelles
+  - Définition des catégories de données personnelles traitées (4 catégories)
+  - Mise en place d'un système de classification des données (3 niveaux)
+  - Formation initiale à la signature de 100% des nouveaux employés
+  - Suivi des accès aux données via un système de log (5000 accès surveillés par jour)
+- id: JUR-005
+  titre: Politique de gestion des risques juridiques
+  departement: Juridique
+  confidentialite: public
+  roles_autorises: *id001
+  version: '1.0'
+  date: '2026-01-15'
+  faits_cles:
+  - Appliquée à tous les services
+  - Identification de 15 risques juridiques majeurs
+  - Plan d'action pour la gestion de 10 risques prioritaires
+  - Formation annuelle obligatoire pour 85% des employés
+  - 'Budget alloué à la gestion des risques juridiques : 200 000 TND (2026)'
+- id: JURR-001
+  titre: Contrat de travail standard
+  departement: Juridique
+  confidentialite: restreint
+  roles_autorises: &id004
+  - rh
+  - admin
+  version: '1.0'
+  date: '2026-07-15'
+  faits_cles:
+  - 'Durée minimale du contrat : 1 an'
+  - 'Clause de non-concurrence : 12 mois après la fin du contrat'
+  - 'Frais de formation : remboursés à 70% si le collaborateur quitte l''entreprise
+    dans les 2 ans'
+  - 'Plafond de l''indemnité de licenciement : 15 mois de salaire'
+  - 'Délai pour formaliser un licenciement : 30 jours'
+- id: JURR-002
+  titre: Politique des litiges et des contentieux
+  departement: Juridique
+  confidentialite: restreint
+  roles_autorises: *id004
+  version: '1.0'
+  date: '2026-08-15'
+  faits_cles:
+  - 'Procédure de traitement des litiges : 60 jours maximum'
+  - 'Montant maximum de la clause de dommages-intérêts : 100 000 TND'
+  - 'Plafond de l''indemnité de licenciement en cas de faute grave : 3 mois de salaire'
+  - 'Délai pour saisine d''un tribunal : 15 jours après la notification de la décision'
+  - 'Pourcentage de frais de justice à la charge de l''entreprise : 50% si le jugement
+    est en faveur de la partie adverse'
+- id: JURR-003
+  titre: Politique des clauses de non-concurrence
+  departement: Juridique
+  confidentialite: restreint
+  roles_autorises: *id004
+  version: '1.0'
+  date: '2026-09-15'
+  faits_cles:
+  - 'Durée de la clause de non-concurrence : 18 mois après la fin du contrat'
+  - 'Plafond de l''indemnité de non-concurrence : 20 000 TND'
+  - 'Pourcentage de l''indemnité de non-concurrence par rapport au salaire : 30%'
+  - 'Délai pour la mise en œuvre de la clause de non-concurrence : 30 jours'
+  - 'Montant maximum de l''indemnité de licenciement pour motif économique : 12 mois
+    de salaire'
+- id: JURR-004
+  titre: Procédures de résolution de conflits interne
+  departement: Juridique
+  confidentialite: restreint
+  roles_autorises: *id004
+  version: '1.0'
+  date: '2026-01-15'
+  faits_cles:
+  - 'Délai pour la résolution d''un conflit : 30 jours'
+  - 'Pourcentage de cas résolus par négociation : 75%'
+  - 'Plafond du montant des indemnités de licenciement en cas de licenciement économique
+    : 10 000 TND'
+  - 'Montant maximum de l''indemnité de licenciement en cas de faute inexcusable :
+    15 000 TND'
+  - 'Délai pour la mise en place d''une procédure de conciliation : 15 jours'
+- id: DIR-001
+  titre: Stratégie 2026-2028
+  departement: Direction
+  confidentialite: confidentiel
+  roles_autorises: &id005
+  - admin
+  version: '1.0'
+  date: '2026-08-15'
+  faits_cles:
+  - Objectif de tripler le chiffre d'affaires à l'horizon 2028
+  - Investissement de 10 MDTN dans la modernisation de l'infrastructure IT
+  - Recrutement de 50 nouveaux employés spécialisés en cloud computing et intelligence
+    artificielle
+  - Création de 3 nouvelles équipes de conseil en cybersécurité
+  - Participation à 5 conférences internationales pour renforcer la notoriété de l'entreprise
+- id: DIR-002
+  titre: Plan de restructuration 2026
+  departement: Direction
+  confidentialite: confidentiel
+  roles_autorises: *id005
+  version: '1.0'
+  date: '2026-09-15'
+  faits_cles:
+  - Réduction de 10% de l'effectif via des départs à l'amiable et des suppressions
+    de postes
+  - Mise en place d'un plan de formation pour 20% des employés
+  - Création de 5 nouveaux postes de direction
+  - Amélioration de l'efficacité opérationnelle de 15% grâce à la digitalisation des
+    processus
+  - Réduction des coûts de fonctionnement de 8% grâce à l'optimisation des ressources
+- id: DIR-003
+  titre: Acquisitions stratégiques 2026-2028
+  departement: Direction
+  confidentialite: confidentiel
+  roles_autorises: *id005
+  version: '1.0'
+  date: '2026-01-15'
+  faits_cles:
+  - Identification de 3 cibles potentielles pour des acquisitions dans les services
+    numériques
+  - Investissement potentiel de 20 MDTN dans des acquisitions futures
+  - Évaluation des cibles avec une équipe spéciale de due diligence
+  - Signature d'accords d'acquisition pour 2 entreprises d'ici 2027
+  - Création d'une nouvelle division de services spécialisés dans 18 mois après les
+    acquisitions
+- id: DIR-004
+  titre: Politique de gestion des risques juridiques
+  departement: Direction
+  confidentialite: confidentiel
+  roles_autorises: *id005
+  version: '1.0'
+  date: '2026-02-15'
+  faits_cles:
+  - Mise en place d'un comité juridique de 5 membres pour la surveillance des risques
+  - Analyse des risques juridiques de 100 contrats par mois
+  - Formation des employés sur la gestion des risques juridiques tous les 6 mois
+  - Création d'un fonds de 1 MDTN pour couvrir les pertes potentielles
+  - Révision annuelle des politiques juridiques avec un taux de conformité visant
+    95%
