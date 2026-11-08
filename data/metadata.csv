@@ -1,0 +1,37 @@
+id,titre,departement,confidentialite,roles_autorises,version,date,chemin
+RH-001,Politique des congés payés,RH,public,employe|manager|rh|finance|admin,1.0,2026-02-15,data/raw/RH-001.md
+RH-002,Politique du télétravail,RH,public,employe|manager|rh|finance|admin,1.0,2026-03-15,data/raw/RH-002.md
+RH-003,Politique des horaires de travail,RH,public,employe|manager|rh|finance|admin,1.0,2026-04-15,data/raw/RH-003.md
+RH-004,Procédure de recrutement,RH,public,employe|manager|rh|finance|admin,1.0,2026-05-15,data/raw/RH-004.md
+RH-005,Politique de formation,RH,public,employe|manager|rh|finance|admin,1.0,2026-06-15,data/raw/RH-005.md
+RH-006,Politique des absences,RH,public,employe|manager|rh|finance|admin,1.0,2026-07-15,data/raw/RH-006.md
+RH-007,Politique des remboursements,RH,public,employe|manager|rh|finance|admin,1.0,2026-08-15,data/raw/RH-007.md
+RH-008,Politique de sécurité informatique,RH,public,employe|manager|rh|finance|admin,1.0,2026-09-15,data/raw/RH-008.md
+RHC-001,Grille des salaires,RH,confidentiel,rh|admin,1.0,2026-03-15,data/raw/RHC-001.md
+RHC-002,Politique des primes,RH,confidentiel,rh|admin,1.0,2026-04-15,data/raw/RHC-002.md
+RHC-003,Procédures d'évaluation des performances,RH,confidentiel,rh|admin,1.0,2026-05-15,data/raw/RHC-003.md
+RHC-004,Procédures disciplinaires,RH,confidentiel,rh|admin,1.0,2026-06-15,data/raw/RHC-004.md
+RHC-005,Politique des congés non payés,RH,confidentiel,rh|admin,1.0,2026-07-15,data/raw/RHC-005.md
+IT-001,Politique du réseau virtuel privé (VPN),IT,public,employe|manager|rh|finance|admin,1.0,2026-04-15,data/raw/IT-001.md
+IT-002,Politique des mots de passe,IT,public,employe|manager|rh|finance|admin,1.0,2026-05-15,data/raw/IT-002.md
+IT-003,Procédures d'incidents informatiques,IT,public,employe|manager|rh|finance|admin,1.0,2026-06-15,data/raw/IT-003.md
+IT-004,Politique du matériel informatique,IT,public,employe|manager|rh|finance|admin,1.0,2026-07-15,data/raw/IT-004.md
+IT-005,Politique de messagerie électronique,IT,public,employe|manager|rh|finance|admin,1.0,2026-08-15,data/raw/IT-005.md
+IT-006,Procédures de sauvegarde des données,IT,public,employe|manager|rh|finance|admin,1.0,2026-09-15,data/raw/IT-006.md
+FIN-001,Budget annuel 2026,Finance,restreint,manager|finance|admin,1.0,2026-05-15,data/raw/FIN-001.md
+FIN-002,Frais de mission,Finance,restreint,manager|finance|admin,1.0,2026-06-15,data/raw/FIN-002.md
+FIN-003,Rapports trimestriels,Finance,restreint,manager|finance|admin,1.0,2026-07-15,data/raw/FIN-003.md
+FIN-004,Achats,Finance,restreint,manager|finance|admin,1.0,2026-08-15,data/raw/FIN-004.md
+JUR-001,Charte de confidentialité,Juridique,public,employe|manager|rh|finance|admin,1.0,2026-06-15,data/raw/JUR-001.md
+JUR-002,RGPD,Juridique,public,employe|manager|rh|finance|admin,1.0,2026-07-15,data/raw/JUR-002.md
+JUR-003,Code de conduite,Juridique,public,employe|manager|rh|finance|admin,1.0,2026-08-15,data/raw/JUR-003.md
+JUR-004,Politique de gestion des données personnelles,Juridique,public,employe|manager|rh|finance|admin,1.0,2026-09-15,data/raw/JUR-004.md
+JUR-005,Politique de gestion des risques juridiques,Juridique,public,employe|manager|rh|finance|admin,1.0,2026-01-15,data/raw/JUR-005.md
+JURR-001,Contrat de travail standard,Juridique,restreint,rh|admin,1.0,2026-07-15,data/raw/JURR-001.md
+JURR-002,Politique des litiges et des contentieux,Juridique,restreint,rh|admin,1.0,2026-08-15,data/raw/JURR-002.md
+JURR-003,Politique des clauses de non-concurrence,Juridique,restreint,rh|admin,1.0,2026-09-15,data/raw/JURR-003.md
+JURR-004,Procédures de résolution de conflits interne,Juridique,restreint,rh|admin,1.0,2026-01-15,data/raw/JURR-004.md
+DIR-001,Stratégie 2026-2028,Direction,confidentiel,admin,1.0,2026-08-15,data/raw/DIR-001.md
+DIR-002,Plan de restructuration 2026,Direction,confidentiel,admin,1.0,2026-09-15,data/raw/DIR-002.md
+DIR-003,Acquisitions stratégiques 2026-2028,Direction,confidentiel,admin,1.0,2026-01-15,data/raw/DIR-003.md
+DIR-004,Politique de gestion des risques juridiques,Direction,confidentiel,admin,1.0,2026-02-15,data/raw/DIR-004.md
