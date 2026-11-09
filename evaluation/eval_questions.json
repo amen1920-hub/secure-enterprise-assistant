@@ -1,0 +1,402 @@
+[
+  {
+    "id": "Q001",
+    "type": "simple",
+    "question": "Quelles sont les catégories de données personnelles traitées selon notre politique de gestion des données personnelles ?",
+    "role": "admin",
+    "doc_attendu": "JUR-004",
+    "reponse_attendue": "Définition des catégories de données personnelles traitées (4 catégories)"
+  },
+  {
+    "id": "Q002",
+    "type": "simple",
+    "question": "Quelle est la proportion d'employés qui doivent suivre une formation annuelle obligatoire sur le RGPD ?",
+    "role": "rh",
+    "doc_attendu": "JUR-002",
+    "reponse_attendue": "Formation annuelle obligatoire pour 75% des employés"
+  },
+  {
+    "id": "Q003",
+    "type": "simple",
+    "question": "Quelle garantie peut-on faire concernant la réponse aux incidents de niveau critique selon les procédures d'incidents informatiques ?",
+    "role": "employe",
+    "doc_attendu": "IT-003",
+    "reponse_attendue": "Réponse immédiate aux incidents de niveau critique (100% des cas)"
+  },
+  {
+    "id": "Q004",
+    "type": "simple",
+    "question": "Combien de temps maximum peut-il prendre pour que ma plainte soit traitée selon la politique des litiges de l'entreprise ?",
+    "role": "rh",
+    "doc_attendu": "JURR-002",
+    "reponse_attendue": "Procédure de traitement des litiges : 60 jours maximum"
+  },
+  {
+    "id": "Q005",
+    "type": "simple",
+    "question": "Quel comité a été mis en place pour la surveillance des risques juridiques et combien de membres y a-t-il dans ce comité ?",
+    "role": "admin",
+    "doc_attendu": "DIR-004",
+    "reponse_attendue": "Mise en place d'un comité juridique de 5 membres pour la surveillance des risques"
+  },
+  {
+    "id": "Q006",
+    "type": "simple",
+    "question": "Quelle est la prime de performance que l'entreprise attribue aux employés?",
+    "role": "admin",
+    "doc_attendu": "RHC-002",
+    "reponse_attendue": "Prime de performance : 5% du salaire mensuel"
+  },
+  {
+    "id": "Q007",
+    "type": "simple",
+    "question": "Combien de caractères minimum doit contenir un mot de passe selon notre politique de sécurité informatique ?",
+    "role": "rh",
+    "doc_attendu": "RH-008",
+    "reponse_attendue": "Mot de passe : 12 caractères minimum"
+  },
+  {
+    "id": "Q008",
+    "type": "simple",
+    "question": "Quelle est la fréquence de réalisation de la maintenance préventive pour le matériel informatique selon la politique entreprise ?",
+    "role": "manager",
+    "doc_attendu": "IT-004",
+    "reponse_attendue": "Maintenance préventive tous les 6 mois"
+  },
+  {
+    "id": "Q009",
+    "type": "simple",
+    "question": "Quelle est la période couverte par le document « Rapports trimestriels » ?",
+    "role": "manager",
+    "doc_attendu": "FIN-003",
+    "reponse_attendue": "Période couverte : 1er janvier - 31 décembre 2026"
+  },
+  {
+    "id": "Q010",
+    "type": "simple",
+    "question": "Combien de jours de congés non payés ai-je chaque année selon la politique de l'entreprise ?",
+    "role": "admin",
+    "doc_attendu": "RHC-005",
+    "reponse_attendue": "Congés non payés : 5 jours par an"
+  },
+  {
+    "id": "Q011",
+    "type": "simple",
+    "question": "L'objectif de la stratégie 2026-2028 est-il de tripler le chiffre d'affaires d'ici 2028 ?",
+    "role": "admin",
+    "doc_attendu": "DIR-001",
+    "reponse_attendue": "Objectif de tripler le chiffre d'affaires à l'horizon 2028"
+  },
+  {
+    "id": "Q012",
+    "type": "simple",
+    "question": "Quelle est la taille maximale d'un message électronique selon notre politique de messagerie électronique ?",
+    "role": "employe",
+    "doc_attendu": "IT-005",
+    "reponse_attendue": "Taille maximale des messages : 25Mo"
+  },
+  {
+    "id": "Q013",
+    "type": "simple",
+    "question": "Combien de risques juridiques majeurs ont été identifiés dans la politique de gestion des risques juridiques?",
+    "role": "finance",
+    "doc_attendu": "JUR-005",
+    "reponse_attendue": "Identification de 15 risques juridiques majeurs"
+  },
+  {
+    "id": "Q014",
+    "type": "simple",
+    "question": "Quel est le montant total du budget annuel pour les achats en Tunisien dinar (TND)?",
+    "role": "manager",
+    "doc_attendu": "FIN-004",
+    "reponse_attendue": "Budget annuel : 150 000 000 TND"
+  },
+  {
+    "id": "Q015",
+    "type": "simple",
+    "question": "Comment la société prévoit-elle réduire l'effectif de 10% en 2026 ?",
+    "role": "admin",
+    "doc_attendu": "DIR-002",
+    "reponse_attendue": "Réduction de 10% de l'effectif via des départs à l'amiable et des suppressions de postes"
+  },
+  {
+    "id": "Q016",
+    "type": "simple",
+    "question": "Combien de temps le processus de recrutement dure-t-il selon la procédure de recrutement?",
+    "role": "rh",
+    "doc_attendu": "RH-004",
+    "reponse_attendue": "Temps de processus : 30 jours"
+  },
+  {
+    "id": "Q017",
+    "type": "simple",
+    "question": "Combien de temps dois-je attendre avant de réaliser un nouveau test de restauration de mes données après avoir effectué le dernier ?",
+    "role": "admin",
+    "doc_attendu": "IT-006",
+    "reponse_attendue": "Tous les employés doivent effectuer un test de restauration tous les 3 mois"
+  },
+  {
+    "id": "Q018",
+    "type": "simple",
+    "question": "Quel pourcentage du salaire annuel total est alloué au budget annuel de formation pour notre entreprise ?",
+    "role": "rh",
+    "doc_attendu": "RH-005",
+    "reponse_attendue": "Budget annuel : 10% du salaire annuel total"
+  },
+  {
+    "id": "Q019",
+    "type": "simple",
+    "question": "Comment définissent les principes éthiques du Code de conduite et combien en compte-on?",
+    "role": "employe",
+    "doc_attendu": "JUR-003",
+    "reponse_attendue": "Définition des principes éthiques (6 principes clés)"
+  },
+  {
+    "id": "Q020",
+    "type": "simple",
+    "question": "Quelles sont les trois cibles potentielles identifiées pour des acquisitions dans les services numériques selon le document « Acquisitions stratégiques 2026-2028 » ?",
+    "role": "admin",
+    "doc_attendu": "DIR-003",
+    "reponse_attendue": "Identification de 3 cibles potentielles pour des acquisitions dans les services numériques"
+  },
+  {
+    "id": "Q021",
+    "type": "simple",
+    "question": "Quel est le délai maximal pour demander un remboursement selon la politique des remboursements ?",
+    "role": "admin",
+    "doc_attendu": "RH-007",
+    "reponse_attendue": "Délai de remboursement : 30 jours"
+  },
+  {
+    "id": "Q022",
+    "type": "simple",
+    "question": "Quelle est la durée de la clause de non-concurrence après la fin du contrat pour l'employé?",
+    "role": "rh",
+    "doc_attendu": "JURR-003",
+    "reponse_attendue": "Durée de la clause de non-concurrence : 18 mois après la fin du contrat"
+  },
+  {
+    "id": "Q023",
+    "type": "simple",
+    "question": "Combien de fois l'évaluation annuelle des performances est-elle effectuée par année ?",
+    "role": "admin",
+    "doc_attendu": "RHC-003",
+    "reponse_attendue": "Évaluations annuelles : 1 fois par an"
+  },
+  {
+    "id": "Q024",
+    "type": "simple",
+    "question": "Quelle est la conséquence disciplinaire reçue après la première infraction selon les procédures disciplinaires ?",
+    "role": "rh",
+    "doc_attendu": "RHC-004",
+    "reponse_attendue": "Première avertissement : 15 jours de congés payés"
+  },
+  {
+    "id": "Q025",
+    "type": "simple",
+    "question": "Quel est le délai maximum accordé pour résoudre un conflit interne selon les procédures en vigueur ?",
+    "role": "admin",
+    "doc_attendu": "JURR-004",
+    "reponse_attendue": "Délai pour la résolution d'un conflit : 30 jours"
+  },
+  {
+    "id": "Q026",
+    "type": "simple",
+    "question": "Quelles sont les heures de travail prévues dans la politique des horaires de travail ?",
+    "role": "admin",
+    "doc_attendu": "RH-003",
+    "reponse_attendue": "Heures de travail : 8h30 à 17h30"
+  },
+  {
+    "id": "Q027",
+    "type": "simple",
+    "question": "Combien de jours d'absence peut-on prendre par an selon la politique des absences ?",
+    "role": "rh",
+    "doc_attendu": "RH-006",
+    "reponse_attendue": "Nombre de jours par an : 10 jours"
+  },
+  {
+    "id": "Q028",
+    "type": "simple",
+    "question": "Quelle est la durée minimale du contrat de travail selon le document « Contrat de travail standard » ?",
+    "role": "rh",
+    "doc_attendu": "JURR-001",
+    "reponse_attendue": "Durée minimale du contrat : 1 an"
+  },
+  {
+    "id": "Q029",
+    "type": "version",
+    "question": "Combien de jours ouvrables de congés payés actuellement bénéficie-t-on selon la politique des congés payés de l'entreprise ?",
+    "role": "employe",
+    "doc_attendu": "RH-001",
+    "reponse_attendue": "Nombre de jours : 25 jours ouvrables par an",
+    "doc_obsolete": "RH-001-V1",
+    "reponse_obsolete": "Nombre de jours : 20 jours ouvrables par an"
+  },
+  {
+    "id": "Q030",
+    "type": "version",
+    "question": "Combien de jours par semaine peut-on travailler à distance actuellement ?",
+    "role": "employe",
+    "doc_attendu": "RH-002",
+    "reponse_attendue": "Nombre de jours par semaine : 2 jours",
+    "doc_obsolete": "RH-002-V1",
+    "reponse_obsolete": "- Nombre de jours par semaine : 3 jours"
+  },
+  {
+    "id": "Q031",
+    "type": "version",
+    "question": "Quel est le salaire minimum actuellement en Tunisie par mois ?",
+    "role": "rh",
+    "doc_attendu": "RHC-001",
+    "reponse_attendue": "Salaire minimum : 2 000 TND par mois",
+    "doc_obsolete": "RHC-001-V1",
+    "reponse_obsolete": "Salaire minimum: 1 800 TND par mois"
+  },
+  {
+    "id": "Q032",
+    "type": "version",
+    "question": "Quelle est la connectivité sécurisée actuellement offerte aux employés travaillant à distance ?",
+    "role": "rh",
+    "doc_attendu": "IT-001",
+    "reponse_attendue": "Connectivité sécurisée pour 95% des employés travaillant à distance",
+    "doc_obsolete": "IT-001-V1",
+    "reponse_obsolete": "- Connectivité sécurisée pour 90% des employés travaillant à distance"
+  },
+  {
+    "id": "Q033",
+    "type": "version",
+    "question": "Quelle est la fréquence actuelle de changement de mot de passe pour les employés ?",
+    "role": "employe",
+    "doc_attendu": "IT-002",
+    "reponse_attendue": "Changement de mot de passe tous les 90 jours",
+    "doc_obsolete": "IT-002-V1",
+    "reponse_obsolete": "Changement de mot de passe tous les 85 jours"
+  },
+  {
+    "id": "Q034",
+    "type": "version",
+    "question": "Quel est le budget total estimé actuellement pour l'année 2026 ?",
+    "role": "manager",
+    "doc_attendu": "FIN-001",
+    "reponse_attendue": "Budget total estimé : 200 000 000 TND",
+    "doc_obsolete": "FIN-001-V1",
+    "reponse_obsolete": "- Budget total estimé : 195 000 000 TND"
+  },
+  {
+    "id": "Q035",
+    "type": "version",
+    "question": "Quel est le seuil de dépenses autorisé par jour actuellement pour les frais de mission ?",
+    "role": "manager",
+    "doc_attendu": "FIN-002",
+    "reponse_attendue": "Seuil de dépenses autorisées par jour : 5 000 TND",
+    "doc_obsolete": "FIN-002-V1",
+    "reponse_obsolete": "Seuil de dépenses autorisées par jour : 4 500 TND"
+  },
+  {
+    "id": "Q036",
+    "type": "version",
+    "question": "Quelle proportion des données sensibles de l'entreprise sont actuellement stockées sur le réseau ?",
+    "role": "finance",
+    "doc_attendu": "JUR-001",
+    "reponse_attendue": "Définition des zones sensibles de l'entreprise (40% des données sensibles stockées sur le réseau)",
+    "doc_obsolete": "JUR-001-V1",
+    "reponse_obsolete": "- Définition des zones sensibles de l'entreprise (35% des données sensibles stockées sur le réseau)"
+  },
+  {
+    "id": "Q037",
+    "type": "interdit",
+    "question": "Quel comité a été mis en place pour surveiller les risques juridiques dans l'entreprise?",
+    "role": "finance",
+    "doc_attendu": "DIR-004",
+    "reponse_attendue": "REFUS"
+  },
+  {
+    "id": "Q038",
+    "type": "interdit",
+    "question": "Quelle est la période couverte par le document « Rapports trimestriels » ?",
+    "role": "rh",
+    "doc_attendu": "FIN-003",
+    "reponse_attendue": "REFUS"
+  },
+  {
+    "id": "Q039",
+    "type": "interdit",
+    "question": "Combien de temps devrai-je respecter la clause de non-concurrence après la fin de mon contrat d'emploi ?",
+    "role": "finance",
+    "doc_attendu": "JURR-003",
+    "reponse_attendue": "REFUS"
+  },
+  {
+    "id": "Q040",
+    "type": "interdit",
+    "question": "Quelle est la prime de performance que l'entreprise verse à ses employés ?",
+    "role": "finance",
+    "doc_attendu": "RHC-002",
+    "reponse_attendue": "REFUS"
+  },
+  {
+    "id": "Q041",
+    "type": "interdit",
+    "question": "Quel est le salaire minimum légal en Tunisie pour un travail à temps plein par mois ?",
+    "role": "manager",
+    "doc_attendu": "RHC-001",
+    "reponse_attendue": "REFUS"
+  },
+  {
+    "id": "Q042",
+    "type": "interdit",
+    "question": "Quel est le seuil maximal de dépenses autorisé par jour pour les frais de mission en Tunisie ?",
+    "role": "employe",
+    "doc_attendu": "FIN-002",
+    "reponse_attendue": "REFUS"
+  },
+  {
+    "id": "Q043",
+    "type": "interdit",
+    "question": "Quelle est la durée minimale du contrat de travail selon le document « Contrat de travail standard » ?",
+    "role": "manager",
+    "doc_attendu": "JURR-001",
+    "reponse_attendue": "REFUS"
+  },
+  {
+    "id": "Q044",
+    "type": "interdit",
+    "question": "Combien de jours de congés non payés ai-je chaque année selon la politique de l'entreprise ?",
+    "role": "finance",
+    "doc_attendu": "RHC-005",
+    "reponse_attendue": "REFUS"
+  },
+  {
+    "id": "Q045",
+    "type": "interdit",
+    "question": "Quelle est la conséquence d'obtenir un premier avertissement selon les procédures disciplinaires de l'entreprise ?",
+    "role": "employe",
+    "doc_attendu": "RHC-004",
+    "reponse_attendue": "REFUS"
+  },
+  {
+    "id": "Q046",
+    "type": "interdit",
+    "question": "Quelles sont les trois cibles potentielles identifiées pour des acquisitions dans les services numériques selon le document « Acquisitions stratégiques 2026-2028 » ?",
+    "role": "finance",
+    "doc_attendu": "DIR-003",
+    "reponse_attendue": "REFUS"
+  },
+  {
+    "id": "Q047",
+    "type": "interdit",
+    "question": "Quel est le délai maximum accordé pour résoudre un conflit interne selon les procédures en vigueur ?",
+    "role": "employe",
+    "doc_attendu": "JURR-004",
+    "reponse_attendue": "REFUS"
+  },
+  {
+    "id": "Q048",
+    "type": "interdit",
+    "question": "Combien de fois l'évaluation annuelle des performances est-elle effectuée par année ?",
+    "role": "finance",
+    "doc_attendu": "RHC-003",
+    "reponse_attendue": "REFUS"
+  }
+]
