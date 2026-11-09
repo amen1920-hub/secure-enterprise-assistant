@@ -16,6 +16,7 @@ COLLECTION = "enterprise_docs"
 LLM_MODEL = "qwen2.5:3b"
 EMBED_MODEL = "bge-m3"
 REFUS = "Je n'ai pas trouvé cette information dans les documents disponibles."
+SEUIL = 0.55
 
 client = QdrantClient(url=QDRANT_URL)
 store = QdrantVectorStore(client=client, collection_name=COLLECTION,
@@ -57,13 +58,16 @@ RÉPONSE :"""
 
 
 def answer(question, k=4):
-    docs = retrieve(question, k)
-    if not docs:
-        return {"reponse": REFUS, "sources": []}
+    resultats = retrieve_scored(question, k)
+    if not resultats or resultats[0][1] < SEUIL:
+        return {"reponse": REFUS, "sources": [], "score": resultats[0][1] if resultats else 0}
+    docs = [d for d, _ in resultats]
     reponse = llm.invoke(construire_prompt(question, docs)).content.strip()
     if REFUS in reponse:
-        return {"reponse": REFUS, "sources": []}
+        return {"reponse": REFUS, "sources": [], "score": resultats[0][1]}
     cites = {int(n) for n in re.findall(r"\[(\d+)\]", reponse)}
+    if not cites:
+        return {"reponse": REFUS, "sources": [], "score": resultats[0][1]}
     sources = [{
         "n": i,
         "doc_id": d.metadata["doc_id"],
@@ -71,24 +75,12 @@ def answer(question, k=4):
         "version": d.metadata["version"],
         "section": d.metadata["section"],
     } for i, d in enumerate(docs, start=1) if i in cites]
-    return {"reponse": reponse, "sources": sources}
-    docs = retrieve(question, k)
-    if not docs:
-        return {"reponse": REFUS, "sources": []}
-    reponse = llm.invoke(construire_prompt(question, docs)).content.strip()
-    sources = [{
-        "n": i,
-        "doc_id": d.metadata["doc_id"],
-        "titre": d.metadata["titre"],
-        "version": d.metadata["version"],
-        "section": d.metadata["section"],
-    } for i, d in enumerate(docs, start=1)]
-    return {"reponse": reponse, "sources": sources}
-
+    return {"reponse": reponse, "sources": sources, "score": resultats[0][1]}
 
 if __name__ == "__main__":
     question = " ".join(sys.argv[1:]) or input("Question : ")
     resultat = answer(question)
+    print(f"(score du meilleur passage : {resultat['score']:.3f})")
     print("\nRéponse :\n" + resultat["reponse"])
     print("\nSources :")
     for s in resultat["sources"]:
