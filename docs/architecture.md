@@ -12,7 +12,7 @@ flowchart TD
     MCP --> T2[get_user_permissions]
     MCP --> T3[get_document_metadata]
     T1 --> F[Filtre par rôle]
-    F --> DB[(Chroma : base vectorielle + métadonnées)]
+    F --> DB[(Qdrant : base vectorielle + métadonnées)]
     DB --> RR[Reranker]
     RR --> LLM[LLM Ollama qwen2.5:3b]
     LLM --> R[Réponse avec citations]
@@ -31,4 +31,4 @@ flowchart TD
 
 ## Pipeline d'ingestion
 
-Documents (PDF, DOCX, MD) → extraction du texte → découpage en chunks → métadonnées (département, confidentialité, rôles, version, date) → embeddings `bge-m3` → Chroma.
+Documents (PDF, DOCX, MD) → extraction du texte → découpage en chunks → métadonnées (département, confidentialité, rôles, version, date) → embeddings `bge-m3` → Qdrant.
