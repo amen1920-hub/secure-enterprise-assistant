@@ -29,6 +29,11 @@ def retrieve(question, k=4):
         key="metadata.statut", match=MatchValue(value="actuelle"))])
     return store.similarity_search(question, k=k, filter=filtre)
 
+def retrieve_scored(question, k=4):
+    filtre = Filter(must=[FieldCondition(
+        key="metadata.statut", match=MatchValue(value="actuelle"))])
+    return store.similarity_search_with_score(question, k=k, filter=filtre)
+
 
 def construire_prompt(question, docs):
     sources = "\n\n".join(
