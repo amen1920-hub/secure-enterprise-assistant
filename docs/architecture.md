@@ -3,20 +3,30 @@
 ## Schéma général
 
 ```mermaid
-flowchart TD
-    U[Utilisateur avec un rôle] --> UI[Interface web React]
-    UI --> API[API FastAPI + authentification JWT]
-    API --> AG[Agent LangGraph]
-    AG --> MCP[Serveur MCP]
-    MCP --> T1[search_documents]
-    MCP --> T2[get_user_permissions]
-    MCP --> T3[get_document_metadata]
-    T1 --> F[Filtre par rôle]
-    F --> DB[(Qdrant : base vectorielle + métadonnées)]
-    DB --> RR[Reranker]
-    RR --> LLM[LLM Ollama qwen2.5:3b]
-    LLM --> R[Réponse avec citations]
-    R --> UI
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+        __start__([<p>__start__</p>]):::first
+        verifier_role(verifier_role)
+        rechercher(rechercher)
+        refuser_hors_sujet(refuser_hors_sujet)
+        generer(generer)
+        verifier_citations(verifier_citations)
+        __end__([<p>__end__</p>]):::last
+        __start__ --> verifier_role;
+        generer --> verifier_citations;
+        rechercher -.-> generer;
+        rechercher -. &nbsp;refuser&nbsp; .-> refuser_hors_sujet;
+        verifier_role -. &nbsp;stop&nbsp; .-> __end__;
+        verifier_role -. &nbsp;suite&nbsp; .-> rechercher;
+        refuser_hors_sujet --> __end__;
+        verifier_citations --> __end__;
+        classDef default fill:#f2f0ff,line-height:1.2
+        classDef first fill-opacity:0
+        classDef last fill:#bfb6fc
 ```
 
 ## Flux d'une question
