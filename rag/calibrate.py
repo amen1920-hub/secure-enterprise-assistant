@@ -18,5 +18,5 @@ HORS_SUJET = [
 for titre, questions in (("DANS LE DOMAINE", DANS_LE_DOMAINE), ("HORS SUJET", HORS_SUJET)):
     print(f"\n== {titre} ==")
     for q in questions:
-        doc, score = retrieve_scored(q, k=1)[0]
+        doc, score = retrieve_scored(q, "admin", k=1)[0]
         print(f"{score:.3f}  {doc.metadata['doc_id']:10}  {q}")
