@@ -3,11 +3,37 @@
 ## Schéma général
 
 ```mermaid
----
-config:
-  flowchart:
-    curve: linear
----
+flowchart TD
+    U[Utilisateur avec un rôle] --> UI[Interface web React]
+    UI --> API[API FastAPI + authentification JWT]
+    API --> AG[Agent LangGraph]
+    AG --> MCP[Serveur MCP]
+    MCP --> T1[search_documents]
+    MCP --> T2[get_user_permissions]
+    MCP --> T3[get_document_metadata]
+    T1 --> F[Filtre par rôle et par version]
+    F --> DB[(Qdrant : vecteurs + métadonnées)]
+    DB --> H[Recherche hybride : vectorielle + BM25, fusion RRF]
+    H --> RR[Reranker, évalué au palier 8]
+    RR --> LLM[LLM Ollama qwen2.5:3b]
+    LLM --> R[Réponse avec citations]
+    R --> UI
+```
+
+## Flux d'une question
+
+1. L'utilisateur se connecte et pose une question.
+2. L'API identifie son rôle grâce au jeton JWT.
+3. L'agent LangGraph vérifie le rôle.
+4. La recherche ne porte que sur les documents autorisés et en vigueur (filtre appliqué avant la récupération).
+5. La recherche hybride fusionne le classement vectoriel et le classement BM25.
+6. Si le meilleur score est sous le seuil, l'assistant refuse sans appeler le LLM.
+7. Sinon, le LLM répond uniquement à partir des passages retrouvés et cite ses sources.
+8. Une réponse sans citation est transformée en refus.
+
+## Graphe de l'agent
+
+```mermaid
 graph TD;
         __start__([<p>__start__</p>]):::first
         verifier_role(verifier_role)
@@ -29,16 +55,8 @@ graph TD;
         classDef last fill:#bfb6fc
 ```
 
-## Flux d'une question
-
-1. L'utilisateur se connecte et pose une question.
-2. L'API identifie son rôle grâce au jeton JWT.
-3. L'agent LangGraph vérifie les permissions de ce rôle.
-4. La recherche ne porte que sur les documents autorisés (filtre appliqué avant la récupération).
-5. Les passages trouvés sont reclassés par le reranker.
-6. Le LLM répond uniquement à partir de ces passages et cite ses sources.
-7. Si aucun document autorisé ne répond, l'assistant refuse ou dit qu'il ne sait pas.
-
 ## Pipeline d'ingestion
 
-Documents (PDF, DOCX, MD) → extraction du texte → découpage en chunks → métadonnées (département, confidentialité, rôles, version, date) → embeddings `bge-m3` → Qdrant.
+Documents Markdown + manifeste YAML → validation des faits clés → découpage par sections → métadonnées (département, confidentialité, rôles autorisés, version, statut, empreinte) → embeddings `bge-m3` → Qdrant.
+
+L'ingestion est incrémentale : une empreinte (hash) du contenu et des métadonnées détecte les documents ajoutés, modifiés ou supprimés, et seuls ceux-là sont réindexés.
