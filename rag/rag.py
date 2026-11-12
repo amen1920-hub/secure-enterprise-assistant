@@ -18,6 +18,7 @@ QDRANT_URL = os.getenv("QDRANT_URL", "http://localhost:6335")
 COLLECTION = "enterprise_docs"
 LLM_MODEL = "qwen2.5:3b"
 EMBED_MODEL = "bge-m3"
+RERANK_MODEL = "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
 REFUS = "Je n'ai pas trouvé cette information dans les documents disponibles."
 SEUIL = 0.55
 ROLES = ["employe", "manager", "rh", "finance", "admin"]
@@ -95,6 +96,27 @@ def retrieve_hybrid(question, role, k=4, n=20, rrf_k=60):
     top = sorted(fusion, key=fusion.get, reverse=True)[:k]
     meilleur_score = dense[0][1] if dense else 0
     return [par_cle[c] for c in top], meilleur_score
+
+
+_reranker = None
+
+
+def get_reranker():
+    global _reranker
+    if _reranker is None:
+        from sentence_transformers import CrossEncoder
+        _reranker = CrossEncoder(RERANK_MODEL)
+    return _reranker
+
+
+def retrieve_reranked(question, role, k=4, n=15):
+    """Hybride (n candidats) puis reclassement par le cross-encoder."""
+    docs, score_vec = retrieve_hybrid(question, role, k=n)
+    if not docs:
+        return [], score_vec, []
+    scores = get_reranker().predict([(question, d.page_content) for d in docs])
+    ordre = sorted(range(len(docs)), key=lambda i: scores[i], reverse=True)[:k]
+    return [docs[i] for i in ordre], score_vec, [float(scores[i]) for i in ordre]
 
 
 def construire_prompt(question, docs):
