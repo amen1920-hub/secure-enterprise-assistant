@@ -34,9 +34,17 @@ flowchart TD
 ## Graphe de l'agent
 
 ```mermaid
+---
+config:
+  flowchart:
+    curve: linear
+---
 graph TD;
         __start__([<p>__start__</p>]):::first
         verifier_role(verifier_role)
+        router(router)
+        lister_permissions(lister_permissions)
+        infos_document(infos_document)
         rechercher(rechercher)
         refuser_hors_sujet(refuser_hors_sujet)
         generer(generer)
@@ -46,8 +54,13 @@ graph TD;
         generer --> verifier_citations;
         rechercher -.-> generer;
         rechercher -. &nbsp;refuser&nbsp; .-> refuser_hors_sujet;
+        router -. &nbsp;metadonnees&nbsp; .-> infos_document;
+        router -. &nbsp;permissions&nbsp; .-> lister_permissions;
+        router -. &nbsp;recherche&nbsp; .-> rechercher;
         verifier_role -. &nbsp;stop&nbsp; .-> __end__;
-        verifier_role -. &nbsp;suite&nbsp; .-> rechercher;
+        verifier_role -. &nbsp;suite&nbsp; .-> router;
+        infos_document --> __end__;
+        lister_permissions --> __end__;
         refuser_hors_sujet --> __end__;
         verifier_citations --> __end__;
         classDef default fill:#f2f0ff,line-height:1.2
