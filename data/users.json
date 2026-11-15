@@ -1,0 +1,27 @@
+[
+  {
+    "email": "employe@novatech.tn",
+    "role": "employe",
+    "password_hash": "$2b$12$9CnKkop1iMl3eTkRLNiXiOuwN6nkJY774uMeg9SczekymTNQYvlRu"
+  },
+  {
+    "email": "manager@novatech.tn",
+    "role": "manager",
+    "password_hash": "$2b$12$hAjCy8MmEliqD/j.4PIU2ON5zv2wL2LoNTgEUQUIdlHb6q1d4JtsK"
+  },
+  {
+    "email": "rh@novatech.tn",
+    "role": "rh",
+    "password_hash": "$2b$12$CFdB1y5hfN8czRz/hOgR/OQQnKXRIdJJmEGQ/79o2OUC96pqr8xxe"
+  },
+  {
+    "email": "finance@novatech.tn",
+    "role": "finance",
+    "password_hash": "$2b$12$104fPgzbu7PSATiUAUc28Ot1x9/mUgX9zK.zJvri7qXNAOJOtIh.u"
+  },
+  {
+    "email": "admin@novatech.tn",
+    "role": "admin",
+    "password_hash": "$2b$12$eVIeAwYSrHA3HHiWdafxzuvNKmrCAlsxmJUHBmZtdw16MmNUDww.C"
+  }
+]

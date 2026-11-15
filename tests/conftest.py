@@ -5,3 +5,4 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "ingestion"))
 sys.path.insert(0, str(ROOT / "rag"))
 sys.path.insert(0, str(ROOT / "agent"))
+sys.path.insert(0, str(ROOT / "api"))
