@@ -1,4 +1,5 @@
 id,titre,departement,confidentialite,roles_autorises,version,date,statut,famille,chemin
+GEN-001,Présentation de l'entreprise NovaTech Solutions,Général,public,employe|manager|rh|finance|admin,1.0,2026-01-05,actuelle,GEN-001,data/raw/GEN-001.md
 RH-001,Politique des congés payés,RH,public,employe|manager|rh|finance|admin,2.0,2026-02-15,actuelle,RH-001,data/raw/RH-001.md
 RH-001-V1,Politique des congés payés,RH,public,employe|manager|rh|finance|admin,1.0,2025-01-15,obsolete,RH-001,data/raw/RH-001-V1.md
 RH-002,Politique du télétravail,RH,public,employe|manager|rh|finance|admin,2.0,2026-03-15,actuelle,RH-002,data/raw/RH-002.md

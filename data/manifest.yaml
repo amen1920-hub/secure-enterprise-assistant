@@ -1,4 +1,26 @@
 documents:
+- id: GEN-001
+  titre: Présentation de l'entreprise NovaTech Solutions
+  departement: Général
+  confidentialite: public
+  roles_autorises:
+  - employe
+  - manager
+  - rh
+  - finance
+  - admin
+  version: '1.0'
+  date: '2026-01-05'
+  faits_cles:
+  - NovaTech Solutions est une entreprise de services numériques et de conseil informatique
+  - Le siège de NovaTech Solutions est situé à Tunis, en Tunisie
+  - NovaTech Solutions a été créée en 2012
+  - NovaTech Solutions compte 320 employés
+  - 'L''entreprise compte 6 départements : Ressources humaines, IT, Finance, Juridique,
+    Direction et Production / Projets'
+  - Le PDG de NovaTech Solutions est Mehdi Gharbi
+  - Le département Production / Projets est le plus grand avec 247 employés
+  - Le département IT compte 35 employés
 - id: RH-001
   titre: Politique des congés payés
   departement: RH
