@@ -64,7 +64,7 @@ def verifier_role(etat):
     return {}
 
 
-def router(etat):
+def router_llm(etat):
     messages = [SystemMessage(content=CONSIGNE), HumanMessage(content=etat["question"])]
     try:
         appels = routeur_llm.invoke(messages).tool_calls
@@ -80,6 +80,13 @@ def router(etat):
                 return {"route": "metadonnees", "doc_id": doc_id}
     return {"route": "recherche"}
 
+def router(etat):
+    import os
+    if os.getenv("ROUTER_MODE", "classifier") == "llm":
+        return router_llm(etat)
+    import router_model
+    route, doc_id, _ = router_model.decider(etat["question"])
+    return {"route": route, "doc_id": doc_id}
 
 def lister_permissions(etat):
     r = tools.get_user_permissions(etat["role"])
