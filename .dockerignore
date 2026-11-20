@@ -1,0 +1,11 @@
+.git
+.venv
+.env
+qdrant_storage
+frontend/node_modules
+__pycache__
+*.pyc
+.pytest_cache
+data/raw
+evaluation
+tests
