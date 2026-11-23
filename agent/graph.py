@@ -140,13 +140,37 @@ def refuser_hors_sujet(etat):
     return refus("hors_sujet", score=etat["score"])
 
 
+def prompt_resume(etat):
+    docs = etat["docs"]
+    titre = docs[0].metadata["titre"]
+    extraits = "\n\n".join(
+        f"[{i}] {d.metadata['section']}\n{d.page_content}"
+        for i, d in enumerate(docs, start=1))
+    return f"""Tu es l'assistant interne de NovaTech Solutions.
+Rédige un résumé du document « {titre} » en français, en 5 à 7 puces courtes, uniquement à partir des extraits ci-dessous.
+
+Règles :
+- Une puce = une idée principale, en une phrase.
+- Termine chaque puce par le numéro de l'extrait d'où elle vient, par exemple [3].
+- N'ajoute aucune information qui n'est pas dans les extraits.
+- Ne recopie pas les extraits mot pour mot.
+
+EXTRAITS :
+{extraits}
+
+RÉSUMÉ :"""
+
+
 def generer(etat):
-    prompt = rag.construire_prompt(etat["question"], etat["docs"])
+    resume = etat.get("route") == "document"
+    marqueur = "RÉSUMÉ :" if resume else "RÉPONSE :"
+    prompt = (prompt_resume(etat) if resume
+              else rag.construire_prompt(etat["question"], etat["docs"]))
     reponse = rag.llm.invoke(prompt).content.strip()
     if rag.REFUS not in reponse and not re.search(r"\[\d+\]", reponse):
         rappel = ("Rappel obligatoire : termine chaque information par le numéro de sa "
-                  "source entre crochets, par exemple [1].\n\nRÉPONSE :")
-        reponse = rag.llm.invoke(prompt.replace("RÉPONSE :", rappel)).content.strip()
+                  "source entre crochets, par exemple [1].\n\n" + marqueur)
+        reponse = rag.llm.invoke(prompt.replace(marqueur, rappel)).content.strip()
     return {"reponse": reponse}
 
 
