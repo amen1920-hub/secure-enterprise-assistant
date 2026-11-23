@@ -1,3 +1,4 @@
+from qdrant_client.models import FieldCondition, Filter, MatchValue
 import sys
 import yaml
 from pathlib import Path
@@ -61,3 +62,32 @@ def get_document_metadata(doc_id: str, role: str) -> dict:
                 "statut": d.get("statut", "actuelle"),
             }
     return {"erreur": INTROUVABLE}
+MAX_CARACTERES = 7000
+
+
+def get_document_content(doc_id: str, role: str) -> dict:
+    """Passages d'un document, dans l'ordre, seulement si le rôle y a accès.
+    Le contrôle d'accès est dans le filtre Qdrant, avant toute lecture."""
+    if role not in rag.ROLES:
+        return {"erreur": "Rôle inconnu."}
+    base = rag.construire_filtre(role)
+    filtre = Filter(must=[*base.must, FieldCondition(
+        key="metadata.doc_id", match=MatchValue(value=doc_id))])
+    points, _ = rag.client.scroll(
+        rag.COLLECTION, scroll_filter=filtre, limit=100,
+        with_payload=True, with_vectors=False)
+    if not points:
+        return {"erreur": INTROUVABLE}
+    points.sort(key=lambda p: p.payload["metadata"]["chunk_index"])
+    passages, total = [], 0
+    for p in points:
+        texte = p.payload["page_content"]
+        if total + len(texte) > MAX_CARACTERES:
+            break
+        total += len(texte)
+        m = p.payload["metadata"]
+        passages.append({
+            "doc_id": m["doc_id"], "titre": m["titre"],
+            "version": m["version"], "section": m["section"], "texte": texte,
+        })
+    return {"doc_id": doc_id, "passages": passages}

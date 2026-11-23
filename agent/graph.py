@@ -2,6 +2,8 @@ import re
 import sys
 from pathlib import Path
 from typing import TypedDict
+
+from langchain_core.documents import Document
 from langchain_core.messages import HumanMessage, SystemMessage
 from langgraph.graph import END, StateGraph
 from pydantic import BaseModel, Field
@@ -13,7 +15,7 @@ import rag  # noqa: E402
 import tools  # noqa: E402
 
 
-# --- Outils exposés au LLM : volontairement SANS paramètre "role" ---------
+# --- Outils exposés au LLM (mode ROUTER_MODE=llm) : SANS paramètre "role" ---
 
 class ListerMesDocuments(BaseModel):
     """Liste les documents que l'utilisateur a le droit de consulter."""
@@ -39,6 +41,11 @@ CONSIGNE = (
 
 routeur_llm = rag.llm.bind_tools(
     [ListerMesDocuments, InfosDocument, RechercherDansLesDocuments])
+
+MESSAGE_PRECISION = (
+    "Pour résumer un document, indiquez son identifiant, par exemple « Résume le document "
+    "IT-001 ». Demandez « Quels documents puis-je consulter ? » pour voir la liste."
+)
 
 
 class Etat(TypedDict, total=False):
@@ -80,6 +87,7 @@ def router_llm(etat):
                 return {"route": "metadonnees", "doc_id": doc_id}
     return {"route": "recherche"}
 
+
 def router(etat):
     import os
     if os.getenv("ROUTER_MODE", "classifier") == "llm":
@@ -87,6 +95,7 @@ def router(etat):
     import router_model
     route, doc_id, _ = router_model.decider(etat["question"])
     return {"route": route, "doc_id": doc_id}
+
 
 def lister_permissions(etat):
     r = tools.get_user_permissions(etat["role"])
@@ -106,6 +115,22 @@ def infos_document(etat):
     return {"reponse": texte, "sources": [], "score": 0.0, "statut": "metadonnees"}
 
 
+def charger_document(etat):
+    """Lit les passages d'un seul document, après le contrôle d'accès par rôle."""
+    r = tools.get_document_content(etat["doc_id"], etat["role"])
+    if "erreur" in r:
+        return refus("introuvable", r["erreur"])
+    docs = [Document(page_content=p["texte"],
+                     metadata={c: p[c] for c in ("doc_id", "titre", "version", "section")})
+            for p in r["passages"]]
+    return {"docs": docs, "score": 1.0}
+
+
+def demander_precision(etat):
+    return {"reponse": MESSAGE_PRECISION, "sources": [], "score": 0.0,
+            "statut": "precision_requise"}
+
+
 def rechercher(etat):
     docs, score = rag.retrieve_hybrid(etat["question"], etat["role"], k=4)
     return {"docs": docs, "score": score}
@@ -113,6 +138,7 @@ def rechercher(etat):
 
 def refuser_hors_sujet(etat):
     return refus("hors_sujet", score=etat["score"])
+
 
 def generer(etat):
     prompt = rag.construire_prompt(etat["question"], etat["docs"])
@@ -146,6 +172,10 @@ def apres_routeur(etat):
     return etat["route"]
 
 
+def apres_chargement(etat):
+    return "stop" if etat.get("statut") == "introuvable" else "generer"
+
+
 def apres_recherche(etat):
     if not etat["docs"] or etat["score"] < rag.SEUIL:
         return "refuser"
@@ -158,6 +188,8 @@ def construire_agent():
     g.add_node("router", router)
     g.add_node("lister_permissions", lister_permissions)
     g.add_node("infos_document", infos_document)
+    g.add_node("charger_document", charger_document)
+    g.add_node("demander_precision", demander_precision)
     g.add_node("rechercher", rechercher)
     g.add_node("refuser_hors_sujet", refuser_hors_sujet)
     g.add_node("generer", generer)
@@ -169,9 +201,14 @@ def construire_agent():
     g.add_conditional_edges("router", apres_routeur, {
         "permissions": "lister_permissions",
         "metadonnees": "infos_document",
+        "document": "charger_document",
+        "precision": "demander_precision",
         "recherche": "rechercher"})
     g.add_edge("lister_permissions", END)
     g.add_edge("infos_document", END)
+    g.add_edge("demander_precision", END)
+    g.add_conditional_edges("charger_document", apres_chargement,
+                            {"stop": END, "generer": "generer"})
     g.add_conditional_edges("rechercher", apres_recherche,
                             {"refuser": "refuser_hors_sujet", "generer": "generer"})
     g.add_edge("refuser_hors_sujet", END)

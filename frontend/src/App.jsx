@@ -15,6 +15,7 @@ const ETIQUETTES = {
   hors_sujet: ["Aucune information trouvée", "refus"],
   sans_source: ["Aucune source valide", "refus"],
   introuvable: ["Introuvable ou accès refusé", "refus"],
+   precision_requise: ["Précision requise", "info"],
   role_invalide: ["Accès refusé", "refus"],
   erreur: ["Erreur", "refus"],
 };

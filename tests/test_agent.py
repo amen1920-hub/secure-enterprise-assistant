@@ -37,3 +37,25 @@ def test_question_de_contenu_repond_avec_source(graph):
     r = graph.ask("Combien de jours de congés payés par an ?", "employe")
     assert r["statut"] == "repondu"
     assert any(s["doc_id"] == "RH-001" for s in r["sources"])
+
+def test_resume_d_un_document_autorise(graph):
+    r = graph.ask("Résume le document IT-001", "employe")
+    assert r["statut"] == "repondu"
+    assert any(s["doc_id"] == "IT-001" for s in r["sources"])
+
+
+def test_resume_d_un_document_interdit_ne_revele_rien(graph):
+    r = graph.ask("Résume le document RHC-001", "employe")
+    assert r["statut"] == "introuvable" and r["sources"] == []
+    assert "salaire" not in r["reponse"].lower()
+
+
+def test_resume_d_un_document_confidentiel_par_rh(graph):
+    r = graph.ask("Résume le document RHC-001", "rh")
+    assert r["statut"] == "repondu"
+    assert any(s["doc_id"] == "RHC-001" for s in r["sources"])
+
+
+def test_resume_sans_identifiant_demande_une_precision(graph):
+    r = graph.ask("résumer du contenu", "employe")
+    assert r["statut"] == "precision_requise"

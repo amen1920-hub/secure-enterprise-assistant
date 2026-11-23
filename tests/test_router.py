@@ -39,3 +39,11 @@ def test_repli_sur_la_recherche_si_le_modele_est_absent(modele, monkeypatch):
     monkeypatch.setattr(modele, "MODELE", Path("modele_inexistant.joblib"))
     monkeypatch.setattr(modele, "_clf", None)
     assert modele.decider("Quels documents puis-je consulter ?") == ("recherche", "", 0.0)
+    
+def test_resume_avec_identifiant(modele):
+    route, doc_id, _ = modele.decider("Résume le document IT-001")
+    assert route == "document" and doc_id == "IT-001"
+
+
+def test_resume_sans_identifiant_demande_une_precision(modele):
+    assert modele.decider("résumer du contenu")[0] == "precision"
