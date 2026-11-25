@@ -4,49 +4,31 @@ titre: Procédures de résolution de conflits interne
 departement: Juridique
 version: "1.0"
 date: "2026-01-15"
+generation: "2"
 ---
 
 # Procédures de résolution de conflits interne
 
-## Procédures de résolution de conflits interne
+## 1. Objectif et champ d'application
 
-### 1. Objectif
-Les présentes procédures visent à établir un cadre clair et efficace pour la résolution des conflits interne au sein de NovaTech Solutions. Elles s'appliquent à tous les employés et sont révisées et mises à jour annuellement.
+Ce document vise à établir les procédures de résolution de conflits interne au sein de l'entreprise NovaTech Solutions. Il s'applique à tous les employés et parties prenantes concernées par des conflits internes. Les conflits peuvent concerner des questions de travail, de conditions de travail, de comportement ou tout autre sujet lié à l'entreprise.
 
-### 2. Délai de résolution des conflits
-Le délai pour la résolution d'un conflit est de 30 jours. Ce délai commence à courir à la date de la première communication officielle du conflit.
+## 2. Délais de résolution
 
-### 3. Méthodes de résolution des conflits
-La plupart des conflits sont résolus par négociation, avec un taux de 75% des cas résolus de cette manière. Les autres méthodes de résolution incluent la médiation et la conciliation.
+Tous les conflits internes doivent être résolus dans un délai de 30 jours, sauf accord mutuel entre les parties ou ordonnance judiciaire. Ce délai commence à courir à la date de la première communication formelle du conflit.
 
-### 4. Procédure de conciliation
-En cas de conflit persistant après la négociation, une procédure de conciliation peut être mise en place. Ce processus doit être mis en place dans un délai de 15 jours à compter de la date de la dernière tentative de négociation.
+## 3. Méthodes de résolution
 
-### 5. Licenciement et indemnités
-#### 5.1 Licenciement économique
-En cas de licenciement économique, le plafond du montant des indemnités est de 10 000 TND. Ce montant est calculé en fonction du salaire de l'employé et de la durée de son expérience chez l'entreprise.
+La majorité des conflits (75%) sont résolus par négociation entre les parties impliquées. Les négociations doivent être menées de manière professionnelle et respectueuse. En cas d'échec de la négociation, les parties peuvent recourir à d'autres méthodes de résolution, telles que la médiation ou la conciliation.
 
-#### 5.2 Licenciement pour faute inexcusable
-En cas de faute inexcusable, l'indemnité de licenciement peut atteindre un montant maximum de 15 000 TND.
+## 4. Procédures de conciliation
 
-### 6. Rôles d'accès et responsabilités
-Les rôles d'accès et responsabilités pour la résolution des conflits sont définis comme suit :
-- **Employé** : doit respecter les procédures de résolution de conflits et communiquer les conflits au responsable du département.
-- **Manager** : doit intervenir dans la résolution des conflits et veiller à la mise en œuvre des mesures nécessaires.
-- **Ressources humaines** : responsable de la coordination et de la mise en œuvre des procédures de résolution de conflits.
-- **Finance** : en charge du suivi financier des indemnités et des procédures de licenciement.
-- **Admin** : responsable de la gestion des dossiers et des communications liées aux conflits.
+En cas de nécessité, une procédure de conciliation peut être mise en place. La mise en place de cette procédure doit se faire dans un délai de 15 jours à compter de la demande d'une partie ou de l'ordonnance judiciaire. La conciliation est une méthode alternative de résolution de conflit qui vise à trouver un accord mutuel entre les parties impliquées.
 
-### 7. Règles de base
-- Congés payés : 25 jours ouvrables par an.
-- Télétravail : 2 jours par semaine maximum.
-- Horaires : 8h30 à 17h30, pause déjeuner d'une heure.
-- Période d'essai : 3 mois.
-- Remboursement des frais : justificatifs à fournir sous 30 jours.
-- Mot de passe : 12 caractères minimum, changement tous les 90 jours.
-- Monnaie : dinar tunisien (TND).
+## 5. Indemnités de licenciement
 
-### 8. Conclusion
-Les employés de NovaTech Solutions sont invités à respecter ces procédures de résolution de conflits interne pour maintenir un environnement de travail serein et productif. En cas de questions ou de difficultés, les employés peuvent contacter le service juridique de l'entreprise.
+En cas de licenciement économique, l'indemnité de licenciement ne peut excéder 10 000 TND. En cas de faute inexcusable, l'indemnité de licenciement peut atteindre un maximum de 15 000 TND. Ces montants sont applicables aux employés de l'entreprise NovaTech Solutions.
 
-Version 1.0 (2026-01-15)
+## 6. Conclusion
+
+Les employés de NovaTech Solutions sont invités à respecter ces procédures de résolution de conflits interne. Toute violation de ces procédures peut entraîner des sanctions appropriées. Les employés sont encouragés à signaler tout conflit potentiel dès sa survenue pour une résolution rapide et efficace.

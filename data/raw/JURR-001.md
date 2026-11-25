@@ -4,55 +4,33 @@ titre: Contrat de travail standard
 departement: Juridique
 version: "1.0"
 date: "2026-07-15"
+generation: "2"
 ---
 
 # Contrat de travail standard
 
-# Contrat de travail standard
+## 1. Introduction
 
-## 1. Durée du contrat
+Le présent contrat de travail standard a été établi par NovaTech Solutions, une entreprise spécialisée dans les services numériques, ayant son siège social à Tunis, Tunisie. Il s'agit de la version 1.0 du contrat, datée du 15 juillet 2026.
 
-1.1. La durée minimale du présent contrat de travail est d'un an, renouvelable par tacite reconduction ou par accord express entre les parties.
+## 2. Durée du Contrat
 
-## 2. Clause de non-concurrence
+Le contrat de travail entre le candidat et NovaTech Solutions est d'une durée minimale de 1 an, renouvelable par tacite reconduction sur accord mutuel.
 
-2.1. À l'issue du contrat de travail, le collaborateur s'engage à ne pas concourir directement ou indirectement à la concurrence de l'entreprise NovaTech Solutions pendant une période de douze mois.
+## 3. Clause de Non-Concurrence
 
-## 3. Frais de formation
+Conformément aux dispositions légales en vigueur, le candidat s'engage à respecter une clause de non-concurrence pour une période de 12 mois à compter de la fin du contrat de travail.
 
-3.1. Les frais de formation subis par le collaborateur seront remboursés à hauteur de 70% si le collaborateur quitte l'entreprise dans les deux années suivant la formation.
+## 4. Frais de Formation
 
-## 4. Indemnité de licenciement
+En cas de départ du candidat dans les 2 ans suivant la fin de son contrat, NovaTech Solutions remboursera 70% des frais de formation initialement engagés.
 
-4.1. En cas de licenciement, l'indemnité de licenciement versée au collaborateur ne pourra excéder un plafond de quinze mois de salaire.
+## 5. Indemnité de Licenciement
 
-## 5. Délai pour formaliser un licenciement
+En cas de licenciement, l'indemnité de licenciement versée au candidat ne dépassera pas 15 mois de salaire.
 
-5.1. Le délai pour formaliser un licenciement est de trente jours, à compter de la décision de l'entreprise.
+## 6. Délai de Formalisation du Licenciement
 
-## 6. Règles de base
+Le délai pour formaliser un licenciement est fixé à 30 jours, à compter de la décision de la direction de l'entreprise.
 
-6.1. Les règles de base applicables à tous les documents de l'entreprise NovaTech Solutions sont les suivantes :
-   - Congés payés : 25 jours ouvrables par an (version 2026).
-   - Télétravail : 2 jours par semaine maximum.
-   - Horaires : 8h30 à 17h30, pause déjeuner d'une heure.
-   - Période d'essai : 3 mois.
-   - Remboursement des frais : justificatifs à fournir sous 30 jours.
-   - Mot de passe : 12 caractères minimum, changement tous les 90 jours.
-   - Monnaie : dinar tunisien (TND).
-
-## 7. Rôles d'accès
-
-7.1. Les rôles d'accès disponibles dans l'entreprise NovaTech Solutions sont les suivants : employe, manager, rh, finance, admin (voir docs/roles.md).
-
-## 8. Départements
-
-8.1. Les départements de l'entreprise NovaTech Solutions sont les suivants :
-   - Ressources humaines : 12 employés, responsable Sonia Ben Ammar.
-   - IT : 35 employés, responsable Karim Trabelsi.
-   - Finance : 15 employés, responsable Leila Mansouri.
-   - Juridique : 6 employés, responsable Walid Jaziri.
-   - Direction : 5 employés, PDG Mehdi Gharbi.
-   - Production / Projets : 247 employés, plusieurs responsables.
-
-Ce contrat de travail est régi par les dispositions légales et réglementaires en vigueur, ainsi que par les règles de base de l'entreprise NovaTech Solutions.
+Cette structure et ces informations reflètent fidèlement le contenu du contrat de travail standard établi par NovaTech Solutions en version 1.0, datée du 15 juillet 2026.

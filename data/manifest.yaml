@@ -262,7 +262,7 @@ documents:
   - Connectivité sécurisée pour 95% des employés travaillant à distance
   - Tous les employés doivent installer le logiciel de connexion VPN dans les 7 jours
     de leur embauche
-  - 'Taux d''availability du réseau VPN : 99,9%'
+  - 'Taux de disponibilité du réseau VPN : 99,9%'
   - Tous les employés doivent effectuer un test de connexion chaque mois
   - Support technique disponible 24/7 pour les problèmes de connexion
   statut: actuelle
@@ -280,7 +280,7 @@ documents:
   - '- Connectivité sécurisée pour 90% des employés travaillant à distance'
   - '- Tous les employés doivent installer le logiciel de connexion VPN dans les 10
     jours de leur embauche'
-  - '- Taux d''availability du réseau VPN : 99,8%'
+  - '- Taux de disponibilité du réseau VPN : 99,8%'
   - '- Tous les employés doivent effectuer un test de connexion chaque trimestre'
   - '- Support technique disponible 24/5 pour les problèmes de connexion'
 - id: IT-002
